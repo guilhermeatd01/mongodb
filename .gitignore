@@ -1,0 +1,7 @@
+# Folders
+./nodemodules
+
+# Files
+.env
+my-bank-api.log
+nodemon.json
