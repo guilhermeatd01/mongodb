@@ -38,5 +38,5 @@ app.use("/account", accountsRouter);
 })();
 
 app.listen(process.env.PORT, () => {
-  logger.info(`API ouvindo na porta ${process.env.PORT}`);
+  logger.info(`API rodando na porta ${process.env.PORT}`);
 });
