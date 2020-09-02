@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import winston from "winston";
 import accountsRouter from "./routes/accounts.js";
 import dotenv from "dotenv";
+import cors from "cors"
 dotenv.config();
 
 const { combine, timestamp, label, printf } = winston.format;
@@ -21,6 +22,7 @@ global.logger = winston.createLogger({
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 app.use("/account", accountsRouter);
 
 (async () => {
